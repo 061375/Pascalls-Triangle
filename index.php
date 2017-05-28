@@ -124,7 +124,7 @@ function factoral($n) {
             filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#258dc8', endColorstr='#1b668e',GradientType=0 );
         }
         body > img {
-            position: absolute;
+            position: fixed;
             z-index: 9999;
             margin: 10px;
             right: 0;
