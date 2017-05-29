@@ -131,7 +131,7 @@ function factoral($n) {
         }
         table {
             position: relative;
-            left: -80%;
+            left: -290vw;
         }
         td {
             text-align: center;
@@ -139,6 +139,16 @@ function factoral($n) {
         tr:nth-child(even) td {
             position: relative;
             left: -1%;
+        }
+        @media screen and (max-width: 1440px) {
+            table {
+                left: -386vw;
+            }
+        }
+        @media screen and (max-width: 1280px) {
+            table {
+                left: -440vw;
+            }
         }
         </style>
 </head>
