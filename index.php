@@ -108,7 +108,6 @@ function factoral($n) {
                 // set all the cells as the same width (max)
                 $(this).find('td').css('width',mxw);
             });
-            //$('tr:nth-child(even) td').css('left','-'+($('table').width() / (td*24))+'%');
         });
       </script>
     <style>
@@ -134,6 +133,9 @@ function factoral($n) {
             position: relative;
             left: -80%;
         }
+        td {
+            text-align: center;
+        }
         tr:nth-child(even) td {
             position: relative;
             left: -1%;
@@ -146,13 +148,21 @@ function factoral($n) {
 <table>
     <?php
     $fs = 40;
+    $sw = false;
     // build the table
     $r = pt(65);
     // loop the x part of the array
     for($x = 0; $x < count($r); $x++) {
         // open a row
         echo '<tr style="font-size:'.$fs.'px">';
-        $fs--;
+        
+        if($fs < 2)$sw = true;
+        
+        if($sw === false) {
+            $fs--;
+        }else{
+            $fs++;
+        }
         // loop the y part of the array
         for($y = 0; $y < count($r[$x]); $y++) {
             // reverse the coords ( or the trinagle will appear sideways)
